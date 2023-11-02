@@ -1,0 +1,151 @@
+:root {
+  --dark: #808080;
+  --header-color: #25b99a;
+  --input-color: rgba(255, 255, 255, 0.2);
+  --button-check-plus-color: #32a883;
+  --button-delete-color: #dc143c;
+  --button-edit-color: #37acde;
+  --light-color: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(../img/back.jpg);
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 4.5rem;
+  border-radius: 0 0 1rem 1rem;
+  background-color: var(--header-color);
+}
+
+#new-task-form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+#new-task-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  padding-right: 0.5rem;
+  color: var(--button-check-plus-color);
+  cursor: pointer;
+  border: none;
+  margin-left: 0.3rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 25px;
+}
+
+#new-task-input {
+  background-color: var(--input-color);
+  border: none;
+  color: var(--light-color);
+  font-size: 1rem;
+  padding-left: 1.5rem;
+  width: 90%;
+  height: 3.5rem;
+  outline: none;
+  border-top-left-radius: 5;
+  border-bottom-left-radius: 25px;
+}
+
+main {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+
+.task-list {
+  padding: 1rem;
+}
+
+.task-list h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+#tasks .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--light-color);
+  padding: 0.6rem;
+  width: 30rem;
+}
+
+.text {
+  font-size: 1.25rem;
+  display: block;
+  border: none;
+  outline: none;
+}
+
+div button {
+  border: none;
+  background-color: var(--light-color);
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.edit {
+  color: var(--button-edit-color);
+}
+
+.delete {
+  color: var(--button-delete-color);
+}
+
+.check {
+  color: var(--button-check-plus-color);
+}
+
+.edit:hover {
+  opacity: 0.6;
+}
+
+.delete:hover {
+  opacity: 0.6;
+}
+
+.check:hover {
+  opacity: 0.6;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+}
+
+#tasks .task .content .text:not(:read-only) {
+  color: var(--dark);
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.8;
+}
